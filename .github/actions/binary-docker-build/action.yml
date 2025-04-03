@@ -23,7 +23,7 @@ runs:
   using: composite
   steps:
     - name: Checkout PyTorch
-      uses: actions/checkout@v4
+      uses: pytorch/pytorch/.github/actions/checkout-pytorch@main
 
     - name: Calculate docker image
       uses: pytorch/test-infra/.github/actions/calculate-docker-image@csl/calculate_docker_image_custom_script_path
