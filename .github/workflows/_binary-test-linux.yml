@@ -200,7 +200,6 @@ jobs:
         if: ${{ steps.filter.outputs.is-test-matrix-empty == 'False' && inputs.build_environment != 'linux-s390x-binary-manywheel' }}
         uses: pytorch/test-infra/.github/actions/calculate-docker-image@csl/calculate_docker_image_custom_script_path
         with:
-          docker-registry: docker.io
           docker-image-name: ${{ inputs.DOCKER_IMAGE }}
           custom-tag-prefix: ${{ inputs.DOCKER_IMAGE_TAG_PREFIX }}
           # The docker-build-script should also be set when building the docker image,
